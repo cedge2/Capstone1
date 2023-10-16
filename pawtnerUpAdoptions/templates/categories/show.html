@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ category.name }}</h1>
+
+<ul>
+  {% for pet in category.pets %}
+  <li><a href="/pets/{{ pet.id }}">{{ pet.name }}</a></li>
+  {% endfor %}
+</ul>
+
+<form method="POST">
+  <button formmethod="GET"
+          formaction="/categories/{{ category.id }}/edit"
+          class="btn btn-primary">Edit
+  </button>
+  <button formmethod="POST"
+          formaction="/categories/{{ category.id }}/delete"
+          class="btn btn-danger">Delete
+  </button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Pet Categories{% endblock %}
+
+{% block content %}
+
+<h1>Pet Categories</h1>
+
+<ul>
+  {% for category in categories %}
+  <li><a href="/categories/{{ category.id }}">{{ category.name }}</a></li>
+  {% endfor %}
+</ul>
+
+<p><a class="btn btn-primary" href="/categories/new">Add Category</a></p>
+
+{% endblock %}

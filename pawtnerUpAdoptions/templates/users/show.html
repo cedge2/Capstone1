@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile: {{ user.full_name }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+  {% if user.image_url %}
+  <div class="col-sm-2 col-6">
+    <img src="{{ user.image_url }}"
+         alt="{{ user.full_name }}"
+         class="img-fluid">
+  </div>
+  {% endif %}
+
+  <div class="col-sm-10 col-12">
+    <h1>{{ user.full_name }}</h1>
+
+    <form>
+      <button class="btn btn-primary btn-sm"
+              formaction="/users/{{ user.id }}/edit"
+              formmethod="GET">Edit Profile
+      </button>
+      <button class="btn btn-danger btn-sm"
+              formaction="/users/{{ user.id }}/delete"
+              formmethod="POST">Delete Profile
+      </button>
+    </form>
+
+    <h2 class="mt-4">Your Pets</h2>
+
+    <ul>
+      {% for pet in user.pets %}
+      <li>
+        <a href="/pets/{{ pet.id }}">{{ pet.name }}</a>
+        <small>Breed: {{ pet.breed }} | Age: {{ pet.age }} | Location: {{ pet.location }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p><a href="/users/{{ user.id }}/pets/new" class="btn btn-primary">Add Pet</a></p>
+
+  </div>
+</div>
+
+{% endblock %}

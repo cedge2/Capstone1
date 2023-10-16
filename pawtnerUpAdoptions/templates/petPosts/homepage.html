@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Pet Adoption{% endblock %}
+
+{% block content %}
+
+<h1>Available Pets for Adoption</h1>
+
+{% for pet in pets %}
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">
+      <a href="/pets/{{ pet.id }}">{{ pet.name }}</a>
+    </h2>
+    <p class="card-text">{{ pet.description }}</p>
+    <p>
+      <small>Age: {{ pet.age }} | Location: {{ pet.location }}</small>
+    </p>
+
+    {% if pet.tags %}
+    <p>
+      <b>Tags:</b>
+      {% for tag in pet.tags %}
+      <a href="/tags/{{ tag.id }}"><span class="badge badge-primary">{{ tag.name }}</span></a>
+      {% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
