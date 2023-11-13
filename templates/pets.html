@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Pets Available for Adoption</h2>
+    <p>Here are some of the adorable pets waiting for their forever homes:</p>
+    
+    <ul>
+    {% for pet in pets %}
+        <li>{{ pet.type }}: Name - {{ pet.name }}, Age - {{ pet.age }}</li>
+    {% else %}
+        <p>No pets available right now.</p>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
