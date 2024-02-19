@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} | Questions {% endblock %}
+{% block body_class %}questions{% endblock %}
+{% block content %}
+<main class="question-area row justify-content-md-center p-2 mt-5">
+    <div class="col-md-7 ">
+      <div class="card p-4">
+        <div class="d-flex justify-content-center p-2">
+          <img src="../static/images/animals.png" alt="" width="10%" height="10%">
+        </div>
+      <form method="POST" id="questions">
+        {{ form.hidden_tag() }}
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        <div class="form-group">
+          {% for error in field.errors %}
+            <span class="text-danger">{{ error }}</span>
+          {% endfor %}
+          {{field.label(class="text-secondary")}}
+          {{ field(placeholder=field.label.text, class="form-control form-select") }}
+        </div>
+        {% endfor %}
+        <button class="btn btn-warning btn-block search-start">Next</button>
+      </form>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}
+
+<!-- attribution for icon
+<a href="https://www.flaticon.com/free-icons/paw" title="paw icons">Paw icons created by Freepik - Flaticon</a>
+<a target="_blank" href="https://icons8.com/icon/106513/pets">Pets</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/2TcinN40k0mq/dog-heart">Dog Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/tCi-exGozYqD/heart-with-dog-paw">Heart with dog paw</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+-->

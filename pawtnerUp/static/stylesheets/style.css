@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: rgba(108, 117, 125, 0.5);
+  --background-color: linear-gradient(to right, #6a11cb, #2575fc); 
+  --text-color: #212529;
+  --shadow-color: rgba(0,0,0,0.2);
+  --font-family-base: 'Segoe UI', Arial, sans-serif;
+  --border-radius: 50rem;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.matched-pet_outer {
+  position: relative;
+}
+
+.matched-pet_outer:not(:last-child) {
+  display: none; 
+}
+
+.matched-pet_outer.move-right {
+  transform: translateX(100%);
+}
+
+.matched-pet_outer.move-left {
+  transform: translateX(-100%);
+}
+
+
+.btn {
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: darken(var(--primary-color), 5%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.main-area {
+  margin: auto;
+  padding: 1rem;
+}
+
+.top-margin-80px {
+  margin-top: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  box-shadow: 0 4px 6px var(--shadow-color);
+  border-radius: 4px; 
+  overflow: hidden;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 80vh; 
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-footer {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-hero-h1 {
+  color: white; 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9)); 
+}
+
+.home-hero-p {
+  color: white; 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9));
+}
+
+
+@media only screen and (min-width: 768px) {
+  .home-hero-h1 {
+    font-size: 2rem;
+  }
+  .home-hero-p {
+    font-size: 1.2rem;
+  }
+}
+
+.loader-div div {
+  animation: scaling 1.5s infinite ease-in-out;
+  background-color: var(--primary-color);
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
