@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} | Home {% endblock %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+    <main class="home-container container-fluid">
+       
+        <h1 class="home-hero-h1">Find your new pet through PawtnerUp!</h1>
+        <p class="home-hero-p">Search pets from different organizations</p>
+        
+        <div class="home-form">
+            <form  action="/signup">
+                <button class="ready-btn btn btn-secondary"> Signup </button>
+            </form>
+            <form action="/login">
+                <button type="submit" class="ready-btn btn btn-secondary"> Login </button>
+            </form>         
+        </div>
+    </main>
+    <footer class="home-footer">
+        <small>2024 - credit for icons and images goes to the following: <a href="https://www.flaticon.com/free-icons/paw" title="paw icons">Paw icons created by Freepik - Flaticon</a>
+            <a target="_blank" href="https://icons8.com/icon/106513/pets">Pets</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            <a target="_blank" href="https://icons8.com/icon/2TcinN40k0mq/dog-heart">Dog Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            <a target="_blank" href="https://icons8.com/icon/tCi-exGozYqD/heart-with-dog-paw">Heart with dog paw</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            <a target="_blank" href="https://icons8.com/icon/3SEb6VCakmEV/no-image-gallery">No Image Gallery</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </small>
+    </footer>
+{% endblock %}

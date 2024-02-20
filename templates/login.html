@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} | Login {% endblock %}
+{% block body_class %}login{% endblock %}
+{% block content %}
+<main class="row justify-content-md-center wide-card p-5 mt-5">
+    <div class="col-md-7 col-lg-5">
+      <div class="card p-4">
+        <h2 class="login-message">Log back in</h2>
+        <form method="POST" id="login_form">
+          {{ form.hidden_tag() }}
+    
+          {% for field in form if field.widget.input_type != 'hidden' %}
+          <div class="form-group">
+            {% for error in field.errors %}
+              <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+            {{field.label}}
+            {{ field(placeholder=field.label.text, class="form-control") }}
+          </div>
+          {% endfor %}
+    
+          <button type="submit" class="btn btn-warning btn-block">Log in</button>
+        </form>
+      
+      </div> 
+    </div>
+  </main>
+
+
+{% endblock %}
