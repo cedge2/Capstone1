@@ -1,6 +1,9 @@
 # Capstone1
+
 Name: "PawtnerUp"
-Link to Deployment: [](https://pawtnerup.onrender.com/home)
+
+Link to Deployment: [PawtnerUp
+](https://pawtnerup.onrender.com)
 
 What it does: An adoption website that helps users find adoptable pets using the Petfinder API
 
