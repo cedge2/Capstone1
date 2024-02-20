@@ -1,4 +1,15 @@
 # Capstone1
+Name: "PawtnerUp"
+Link to Deployment: [](https://pawtnerup.onrender.com/home)
+
+What it does: An adoption website that helps users find adoptable pets using the Petfinder API
+
+Features implemented: Favorites list, search pets in your area, links to adoption websites
+
+Updates/Extras: In the future, I would like to add maybe real-time chat, or a pending page so that users can know where their pet is in the adoption process, and communicate with the adoption organization in the same place, although this would be an extra and not fully necessary since the petfinder API leads you to the adoption websites anyways.
+
+User flow: Users will either create an account or login, then can look up adoption agencies or animals in their area, and add them to their favorites list if they like.
+
 API link: https://www.petfinder.com/developers/v2/docs/
 
 Tools: Flask, Postgresql, Petfinder API, VSCode, GITHub
