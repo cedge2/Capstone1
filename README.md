@@ -2,8 +2,7 @@
 
 Name: "PawtnerUp"
 
-Link to Deployment: [PawtnerUp
-](https://pawtnerup.onrender.com)
+Link to Deployment: [https://pawtnerup.onrender.com](https://pawtnerup.onrender.com)
 
 What it does: An adoption website that helps users find adoptable pets using the Petfinder API
 
